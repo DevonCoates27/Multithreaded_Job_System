@@ -1,0 +1,42 @@
+{
+	"File1_Errors_and_Warnings": [
+		{
+			"file_path": "./Code/TestCompileError/count.cpp",
+			"line_number": 10, 
+			"column_number": 22, 
+			"error_description": " expected ';' after expression",
+			"code": "        std::cout << i;\n    }\n    std::cout << endl\n    int x = 3.14;\n    return 0;\n"
+		},
+		{
+			"file_path": "./Code/TestCompileError/count.cpp",
+			"line_number": 10, 
+			"column_number": 18, 
+			"error_description": " use of undeclared identifier 'endl'; did you mean 'std::endl'?",
+			"code": "        std::cout << i;\n    }\n    std::cout << endl\n    int x = 3.14;\n    return 0;\n"
+		},
+		{
+			"file_path": "./Code/TestCompileError/count.cpp",
+			"line_number": 11, 
+			"column_number": 13, 
+			"error_description": " implicit conversion from 'double' to 'int' changes value from 3.14 to 3 [-Wliteral-conversion]",
+			"code": "    }\n    std::cout << endl\n    int x = 3.14;\n    return 0;\n}\n"
+		}
+	],
+
+	"File2_Errors_and_Warnings": [
+		{
+			"file_path": "./Code/TestCompileError/helloWorld.cpp",
+			"line_number": 7, 
+			"column_number": 25, 
+			"error_description": " use of undeclared identifier 'World'",
+			"code": "\nint main(){\n    std::cout << Hello, World << std::endl;\n    return 0;\n}\n"
+		},
+		{
+			"file_path": "./Code/TestCompileError/helloWorld.cpp",
+			"line_number": 7, 
+			"column_number": 18, 
+			"error_description": " use of undeclared identifier 'Hello'; did you mean 'ftello'?",
+			"code": "\nint main(){\n    std::cout << Hello, World << std::endl;\n    return 0;\n}\n"
+		}
+	]
+}

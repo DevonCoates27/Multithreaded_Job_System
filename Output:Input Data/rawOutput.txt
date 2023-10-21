@@ -1,0 +1,30 @@
+clang++ -g -std=c++14 ./Code/TestCompileError/*.cpp -o testCompileErrorExecutable
+./Code/TestCompileError/count.cpp:10:22: error: expected ';' after expression
+    std::cout << endl
+                     ^
+                     ;
+./Code/TestCompileError/count.cpp:10:18: error: use of undeclared identifier 'endl'; did you mean 'std::endl'?
+    std::cout << endl
+                 ^~~~
+                 std::endl
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:1037:1: note: 'std::endl' declared here
+endl(basic_ostream<_CharT, _Traits>& __os)
+^
+./Code/TestCompileError/count.cpp:11:13: warning: implicit conversion from 'double' to 'int' changes value from 3.14 to 3 [-Wliteral-conversion]
+    int x = 3.14;
+        ~   ^~~~
+1 warning and 2 errors generated.
+./Code/TestCompileError/helloWorld.cpp:7:25: error: use of undeclared identifier 'World'
+    std::cout << Hello, World << std::endl;
+                        ^
+./Code/TestCompileError/helloWorld.cpp:7:18: error: use of undeclared identifier 'Hello'; did you mean 'ftello'?
+    std::cout << Hello, World << std::endl;
+                 ^~~~~
+                 ftello
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/stdio.h:338:8: note: 'ftello' declared here
+off_t    ftello(FILE * __stream);
+         ^
+2 errors generated.
+make: *** [testCompileError] Error 1
+
+512
